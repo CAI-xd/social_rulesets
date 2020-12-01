@@ -100,5 +100,6 @@ class Rulesets:
 
 
 if __name__ == '__main__':
-    shutil.rmtree(OUTPUT_DIRECTORY)
+    if os.path.exists(OUTPUT_DIRECTORY):
+        shutil.rmtree(OUTPUT_DIRECTORY)
     Rulesets().save_rulesets(OUTPUT_DIRECTORY)
