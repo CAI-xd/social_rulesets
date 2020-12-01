@@ -82,7 +82,7 @@ class Rulesets:
         return params
 
     def retrieve_page(self, page: int) -> APIPage:
-        response: Response = requests.get(self.url, {'page': page})
+        response: Response = requests.get(self.url, self.get_params({'page': page}))
         response.raise_for_status()
         return response.json()
 
