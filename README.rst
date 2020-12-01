@@ -1,6 +1,7 @@
 
 .. image:: https://github.com/Koodous/social_rulesets/workflows/Update%20rulesets/badge.svg
   :alt: Latest Github update status
+  :target: https://github.com/Koodous/social_rulesets/actions?query=workflow%3A%22Update+rulesets%22
 
 social rulesets
 ===============
