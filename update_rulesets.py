@@ -74,9 +74,12 @@ class Ruleset:
 
 class Rulesets:
     url: str = RULESETS_API_URL
+    default_params = {'social': 'True'}
 
     def get_params(self, extra_params: Union[dict, None] = None) -> dict:
-        return dict(extra_params or {})
+        params = dict(self.default_params)
+        params.update(extra_params or {})
+        return params
 
     def retrieve_page(self, page: int) -> APIPage:
         response: Response = requests.get(self.url, {'page': page})
